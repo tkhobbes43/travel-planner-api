@@ -1,12 +1,11 @@
-const { Model, DataTypes } = require('sequelize');
+const { Sequelize, DataTypes, Model } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // create our Traveller model
 class Traveller extends Model {}
 
 // create fields/columns for Traveller model
-Traveller.init(
-    {
+Traveller.init({
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
